@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { @apply bg-ink-950 text-zinc-100 font-sans antialiased; }
+  button:focus-visible, input:focus-visible { @apply outline-none ring-2 ring-gold/60; }
+}
+@layer components {
+  .gold-text { @apply bg-gradient-to-b from-gold-light via-gold to-gold-dark bg-clip-text text-transparent; }
+  .btn-gold { @apply rounded-xl bg-gradient-to-b from-gold-light via-gold to-gold-dark px-5 py-2.5 font-bold text-ink-950 shadow-[0_0_24px_#f5c54255] transition hover:brightness-110 active:scale-95 disabled:cursor-not-allowed disabled:opacity-40 disabled:shadow-none; }
+  .btn-ghost { @apply rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-sm font-medium transition hover:bg-white/10 active:scale-95; }
+  .card { @apply rounded-2xl border border-white/10 bg-ink-800/70 backdrop-blur; }
+  .input { @apply w-full rounded-xl border border-white/10 bg-ink-900 px-4 py-3 outline-none transition focus:border-gold/60; }
+}
+.bg-casino {
+  background:
+    radial-gradient(60rem 30rem at 10% -10%, #a855f733, transparent),
+    radial-gradient(50rem 30rem at 100% 0%, #ff2e9a22, transparent),
+    radial-gradient(40rem 30rem at 50% 120%, #22d3ee1a, transparent),
+    #07060b;
+}
+@media (prefers-reduced-motion: reduce) { *, ::before, ::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }

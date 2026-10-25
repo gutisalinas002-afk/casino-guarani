@@ -1,0 +1,6 @@
+{$DOMAIN} {
+	encode gzip
+	reverse_proxy app:4000 {
+		flush_interval -1   # necesario para el tiempo real (SSE)
+	}
+}
